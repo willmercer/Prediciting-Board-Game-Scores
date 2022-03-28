@@ -77,20 +77,19 @@ An initial overview of the Categories and Mechanics revealed that despite there 
 A selection of regression models were used to predict the average user score, each came with its own pros and cons which have been outlined below.
 
 - Linear Regression
-  + Computationally quick
-    − Prefers linear relationships
+  + Positive: Computationally quick
+  + Negative: Prefers linear relationships
   
 Ridge Regression
-\+ Compensates multicollinearity
-\− Outliers given more importance
+  + Positive: Compensates multicollinearity
+  + Negative: Outliers given more importance
   
 - Decision Tree
-\+ creates a pathway to an outcome
-\− tend to overfit on data
+  + Positive: Creates a pathway to an outcome
+  + Negative: Tends to overfit on data
   
 - Random Forest
-  \+ reduces overfitting of decision tree
-  
-  \− Computationally complex and slow
+  + Positive: Reduces overfitting of decision tree
+  + Negative: Computationally complex and slow
 
 Since all of these models were used on 2 data sets, a pipeline was created to streamline the process of scoring each scenario. The way this worked is outlined below.
