@@ -1,2 +1,4 @@
-# wmercer
-The Public Repository of William Mercer
+# Predicting the average user Board game rating
+
+
+
