@@ -78,7 +78,7 @@ A selection of regression models were used to predict the average user score, ea
 
 - Linear Regression
   + Computationally quick
-  − Prefers linear relationships
+    − Prefers linear relationships
   
 Ridge Regression
 \+ Compensates multicollinearity
