@@ -1,6 +1,6 @@
 # Predicting the average user Board game rating
 
-![image](https://user-images.githubusercontent.com/94080869/160411683-67f714a8-1bb2-4df6-8d61-10971ad5f4aa.png)
+![image](https://user-images.githubusercontent.com/94080869/160414527-e1145400-7141-4793-ae48-d187922dc990.png)
 
 Board games are an ever increasingly popular way for people to spend their free time, as they seek to get value for their money with a tangible item that has a lot of replayability. The tabletop game market was worth $11.3bn in 2020 and the Compound Annual Growth Rate up to 2026 is expected to be 9.59%.
 
@@ -64,15 +64,15 @@ Appropriate action was taken for each finding, such as imputing average values f
 
 When deciding how to deal with outliers, two datasets were produced, one where only the most extreme ones were removed, and another dataset where about half of them were removed. This was out of curiosity on my part, as I wanted to see which would produce greater scores (if at all). Only around half were removed because I wanted to maintain a relatively high number of values, to reduce overfitting and improve accuracy.
 
-Image
+<img width="698" alt="image" src="https://user-images.githubusercontent.com/94080869/160414268-f745e114-d035-47fa-b617-75a01dc09326.png">
 
 The graph above describes the strength of the correlations between each predictor and the target. Perhaps surprisingly the difficulty of a game is strongly associated with the score, indicating that players enjoy harder games. Unsurprisingly the more difficult a game, the longer it takes to play. It would also seem that newer games tend to be rated more favourably, showing perhaps some recency bias. 
 
-Image
+<img width="446" alt="image" src="https://user-images.githubusercontent.com/94080869/160414358-c3d0c3b8-613f-40ee-bca9-88f91950aa73.png">
 
-Image
+<img width="465" alt="image" src="https://user-images.githubusercontent.com/94080869/160414380-d677d289-f9be-4fee-ad8c-198078f92b90.png">
 
-Image
+<img width="446" alt="image" src="https://user-images.githubusercontent.com/94080869/160414404-1ed09730-a236-4bdd-bc19-2b2d1deda145.png">
 
 An initial overview of the Categories and Mechanics revealed that despite there being 192 unique Mechanics, dice rolling and playing card usage were the most prevalent. This shows that humans have not changed their habits much in the last few thousand years! With Categories, War games and Family Games were the most popular.
 
@@ -96,15 +96,15 @@ Ridge Regression
 
 Since all of these models were used on 2 data sets, a pipeline was created to streamline the process of scoring each scenario. The way this worked is outlined below.
 
-Pipeline Image
+<img width="602" alt="image" src="https://user-images.githubusercontent.com/94080869/160414682-66f75361-625d-4f58-b261-d8d3613a50e2.png">
 
 The results in the figure below show the mean cross validated training scores. The red highlights the best performing model scenario. The last scenario is the one that would be relevant to a person hoping to evaluate a new game, or developing a game, as these figures would not be available to them before or just after a release.
 
-Results Image 1
+<img width="656" alt="image" src="https://user-images.githubusercontent.com/94080869/160415023-e5a8934f-a0ad-48b6-b757-5aceecf4192b.png">
 
 The best performing model was the Random Forest with all outliers included. The model was then tested using unseen data and scored, with the results shown below.
 
-Results Image 2
+<img width="352" alt="image" src="https://user-images.githubusercontent.com/94080869/160415200-94cf364d-e264-4026-8830-bea706efa2d0.png">
 
 The R2 score attained, even after hyperparameter tuning using GridSearch, was only 0.5, well below the baseline of 6.4. This was down from the 0.549 score on the training data, suggesting overfitting. Aside from getting more data and removing features, further hyperparameter tuning would also help. Such as increasing the max depth the number of estimators, the more trees and the deeper they are, the more likely the model is to overcome the limitations of Decision Trees.
 
@@ -112,7 +112,7 @@ The RMSE was also relatively high, 0.65, above the rule of thumb value of 0.4 th
 
 The MAE was larger than the MSE, this tells about the nature of the errors, being that the errors were constant in their difference to the actual values, with not a lot of fluctuation.
 
-Feature Importance Image
+<img width="555" alt="image" src="https://user-images.githubusercontent.com/94080869/160415257-f7bb2a04-f148-4c7d-8e34-f6f1992d5472.png">
 
 The most important feature by far was the Average Difficulty, not surprising considering it was the most highly correlated with Average Rating.
 
@@ -133,3 +133,5 @@ There are also positive insights into the board game market from a business pers
 - Wargames and Strategy are the most frequent categories in the top games list
 - Dice and cards are still everyone’s favourite way to play, that doesn’t seem to have changed over history
 - Newer games score better
+
+![image](https://user-images.githubusercontent.com/94080869/160415310-149c4d44-6d16-4f46-9094-3ae374d09a03.png)
