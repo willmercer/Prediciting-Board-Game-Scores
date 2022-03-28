@@ -54,3 +54,7 @@ Initial findings when examining the values of the data came up with the followin
 - There was a 999 Maximum player game.
 - Min play time for some games was 0 mins.
 - Max play time was 60000 mins.
+
+Appropriate action was taken for each finding, such as imputing average values for the maximum number of players and replacing minimum player values of 0 with 1, as a game cannot have no players!
+
+When deciding how to deal with outliers, two datasets were produced, one where only the most extreme ones were removed, and another dataset where about half of them were removed. This was out of curiosity on my part, as I wanted to see which would produce greater scores (if at all). Only around half were removed because I wanted to maintain a relatively high number of values, to reduce overfitting and improve accuracy.
