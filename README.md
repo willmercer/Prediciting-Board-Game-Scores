@@ -93,3 +93,41 @@ Ridge Regression
   + Negative: Computationally complex and slow
 
 Since all of these models were used on 2 data sets, a pipeline was created to streamline the process of scoring each scenario. The way this worked is outlined below.
+
+Pipeline Image
+
+The results in the figure below show the mean cross validated training scores. The red highlights the best performing model scenario. The last scenario is the one that would be relevant to a person hoping to evaluate a new game, or developing a game, as these figures would not be available to them before or just after a release.
+
+Results Image 1
+
+The best performing model was the Random Forest with all outliers included. The model was then tested using unseen data and scored, with the results shown below.
+
+Results Image 2
+
+The R2 score attained, even after hyperparameter tuning using GridSearch, was only 0.5, well below the baseline of 6.4. This was down from the 0.549 score on the training data, suggesting overfitting. Aside from getting more data and removing features, further hyperparameter tuning would also help. Such as increasing the max depth the number of estimators, the more trees and the deeper they are, the more likely the model is to overcome the limitations of Decision Trees.
+
+The RMSE was also relatively high, 0.65, above the rule of thumb value of 0.4 that dictates a good model.
+
+The MAE was larger than the MSE, this tells about the nature of the errors, being that the errors were constant in their difference to the actual values, with not a lot of fluctuation.
+
+Feature Importance Image
+
+The most important feature by far was the Average Difficulty, not surprising considering it was the most highly correlated with Average Rating.
+
+Interestingly Game Age was slightly stronger that Year, despite being inverses of each other.
+
+Perhaps to have been expected, having overall provided the poorest performing models bar one, the dummified predictors mostly had no impact on the model.
+
+Although there were 187 different mechanics, their number seemed to have little Importance, while the number of Categories carried a little more weight.
+
+Unfortunately from a Business perspective, the number of ratings and number of owners do have a fair amount of importance. Making predicting the potential score for a new or unpublished game more difficult.
+
+## Impact and Conclusions
+
+I was unable to beat the baseline score attained and while this may appear initially disheartening there are still plenty of avenues to explore to overcome this. Principally these would be to acquire more data, set the Decision Tree to ‘go deeper’ to overcome overfitting and to include Mechanics and Categories to a greater degree.
+
+There are also positive insights into the board game market from a business perspective;
+- People like more complex games!
+- Wargames and Strategy are the most frequent categories in the top games list
+- Dice and cards are still everyone’s favourite way to play, that doesn’t seem to have changed over history
+- Newer games score better
