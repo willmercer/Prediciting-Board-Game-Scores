@@ -1,5 +1,6 @@
 # Predicting the average user Board game rating
 
+Image
 
 Board games are an ever increasingly popular way for people to spend their free time, as they seek to get value for their money with a tangible item that has a lot of replayability. The tabletop game market was worth $11.3bn in 2020 and the Compound Annual Growth Rate up to 2026 is expected to be 9.59%.
 
@@ -55,6 +56,36 @@ Initial findings when examining the values of the data came up with the followin
 - Min play time for some games was 0 mins.
 - Max play time was 60000 mins.
 
+Image
+
 Appropriate action was taken for each finding, such as imputing average values for the maximum number of players and replacing minimum player values of 0 with 1, as a game cannot have no players!
 
 When deciding how to deal with outliers, two datasets were produced, one where only the most extreme ones were removed, and another dataset where about half of them were removed. This was out of curiosity on my part, as I wanted to see which would produce greater scores (if at all). Only around half were removed because I wanted to maintain a relatively high number of values, to reduce overfitting and improve accuracy.
+
+Image
+
+The graph above describes the strength of the correlations between each predictor and the target. Perhaps surprisingly the difficulty of a game is strongly associated with the score, indicating that players enjoy harder games. Unsurprisingly the more difficult a game, the longer it takes to play. It would also seem that newer games tend to be rated more favourably, showing perhaps some recency bias. 
+
+Image
+
+Image
+
+Image
+
+An initial overview of the Categories and Mechanics revealed that despite there being 192 unique Mechanics, dice rolling and playing card usage were the most prevalent. This shows that humans have not changed their habits much in the last few thousand years! With Categories, War games and Family Games were the most popular.
+
+A selection of regression models were used to predict the average user score, each came with its own pros and cons which have been outlined below.
+•Linear Regression
++ Computationally quick
+− Prefers linear relationships
+•Ridge Regression
++ Compensates multicollinearity
+− Outliers given more importance
+•Decision Tree
++ creates a pathway to an outcome
+− tend to overfit on data
+•Random Forest
++ reduces overfitting of decision tree
+− Computationally complex and slow
+
+Since all of these models were used on 2 data sets, a pipeline was created to streamline the process of scoring each scenario. The way this worked is outlined below.
