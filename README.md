@@ -75,6 +75,7 @@ Image
 An initial overview of the Categories and Mechanics revealed that despite there being 192 unique Mechanics, dice rolling and playing card usage were the most prevalent. This shows that humans have not changed their habits much in the last few thousand years! With Categories, War games and Family Games were the most popular.
 
 A selection of regression models were used to predict the average user score, each came with its own pros and cons which have been outlined below.
+
 Linear Regression
 \+ Computationally quick
 \− Prefers linear relationships
