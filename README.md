@@ -32,3 +32,13 @@ I used statistical evaluation methods to quantify how well this was achieved:
 3. Modelling and Evaluation.
 - Comparing different types of models
 - Tuning for the best possible score
+
+### Getting the Data
+
+Unfortunately the website itself would not allow text to be scraped directly with BeautifulSoup. I switched to using their own API to do this. Although this proved to be a more successful endeavour, the Category and Mechanics elements could not be extracted. 
+
+Furthermore the BoardGameGeek server could not handle a large amount of requests at any one time, meaning that data was lost unless sleep intervals were put in place.
+
+Ultimately in the interest of saving time, the decision was taken to use a premade Kaggle dataset. 
+
+### Data Cleaning and Exploratory Data Analysis (EDA)
