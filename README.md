@@ -76,9 +76,9 @@ An initial overview of the Categories and Mechanics revealed that despite there 
 
 A selection of regression models were used to predict the average user score, each came with its own pros and cons which have been outlined below.
 
-Linear Regression
-\+ Computationally quick
-\− Prefers linear relationships
+- Linear Regression
+  + Computationally quick
+  − Prefers linear relationships
   
 Ridge Regression
 \+ Compensates multicollinearity
