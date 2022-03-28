@@ -58,7 +58,7 @@ Initial findings when examining the values of the data came up with the followin
 - Min play time for some games was 0 mins.
 - Max play time was 60000 mins.
 
-Image
+<img width="468" alt="image" src="https://user-images.githubusercontent.com/94080869/160414058-9c6f66f9-77c3-43e6-b367-c67e0adb6496.png">
 
 Appropriate action was taken for each finding, such as imputing average values for the maximum number of players and replacing minimum player values of 0 with 1, as a game cannot have no players!
 
