@@ -42,3 +42,15 @@ Furthermore the BoardGameGeek server could not handle a large amount of requests
 Ultimately in the interest of saving time, the decision was taken to use a premade Kaggle dataset. 
 
 ### Data Cleaning and Exploratory Data Analysis (EDA)
+
+While the dataset was quite clean, further cleaning was required. Minimum age was changed to the object type, while Rating Average (the target variable) and Complexity had commas changed to periods and were both converted to be floats.
+
+Preliminary data engineering created extra predictors which were; game age, Mechanics count and Category count.
+
+Initial findings when examining the values of the data came up with the following:
+- Oldest game is 5500 years old!
+- There were some 0 minimum player games.
+- There were some 0 maximum player games.
+- There was a 999 Maximum player game.
+- Min play time for some games was 0 mins.
+- Max play time was 60000 mins.
