@@ -44,6 +44,8 @@ Ultimately in the interest of saving time, the decision was taken to use a prema
 
 ### Data Cleaning and Exploratory Data Analysis (EDA)
 
+<img width="876" alt="image" src="https://user-images.githubusercontent.com/94080869/160413758-0e2d1ae7-24ff-4039-a287-886469724159.png">
+
 While the dataset was quite clean, further cleaning was required. Minimum age was changed to the object type, while Rating Average (the target variable) and Complexity had commas changed to periods and were both converted to be floats.
 
 Preliminary data engineering created extra predictors which were; game age, Mechanics count and Category count.
